@@ -1,0 +1,17 @@
+gunmayhem.swf
+athena.elf
+reference/
+analysis/
+tools/
+tests/
+validation.js
+vrambench.js
+.validation/
+__pycache__/
+*.pyc
+assets/cosmetics/colors.png
+assets/cosmetics/colors.json
+assets/cosmetics/accessories.png
+assets/cosmetics/accessories.json
+assets/cosmetics/preview.png
+assets/fonts/showcard.ttf

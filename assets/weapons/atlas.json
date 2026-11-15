@@ -1,0 +1,1112 @@
+{
+  "image": "assets/weapons/atlas.png",
+  "width": 512,
+  "height": 512,
+  "parts": {
+    "m1911": {
+      "x": 468,
+      "y": 73,
+      "w": 42,
+      "h": 27,
+      "originX": 8.95,
+      "originY": 16.25,
+      "source": "reference/weapons-all/DefineSprite_416_gun_m1911/2.png",
+      "symbol": 416,
+      "frame": 2,
+      "sourceCrop": [
+        9,
+        112,
+        51,
+        139
+      ]
+    },
+    "deagle": {
+      "x": 135,
+      "y": 471,
+      "w": 47,
+      "h": 27,
+      "originX": 10.650000000000006,
+      "originY": 16.849999999999994,
+      "source": "reference/weapons-all/DefineSprite_422_gun_deagle/2.png",
+      "symbol": 422,
+      "frame": 2,
+      "sourceCrop": [
+        54,
+        59,
+        101,
+        86
+      ]
+    },
+    "glock": {
+      "x": 474,
+      "y": 326,
+      "w": 38,
+      "h": 30,
+      "originX": 8.75,
+      "originY": 16.1,
+      "source": "reference/weapons-all/DefineSprite_434_gun_glock/2.png",
+      "symbol": 434,
+      "frame": 2,
+      "sourceCrop": [
+        16,
+        30,
+        54,
+        60
+      ]
+    },
+    "bull": {
+      "x": 143,
+      "y": 440,
+      "w": 46,
+      "h": 25,
+      "originX": 6.4,
+      "originY": 16.549999999999997,
+      "source": "reference/weapons-all/DefineSprite_442_gun_bull/2.png",
+      "symbol": 442,
+      "frame": 2,
+      "sourceCrop": [
+        6,
+        28,
+        52,
+        53
+      ]
+    },
+    "49": {
+      "x": 333,
+      "y": 393,
+      "w": 39,
+      "h": 28,
+      "originX": 7.700000000000003,
+      "originY": 15.75,
+      "source": "reference/weapons-all/DefineSprite_451_gun_49/2.png",
+      "symbol": 451,
+      "frame": 2,
+      "sourceCrop": [
+        54,
+        62,
+        93,
+        90
+      ]
+    },
+    "python": {
+      "x": 76,
+      "y": 471,
+      "w": 57,
+      "h": 27,
+      "originX": 8.1,
+      "originY": 17.049999999999997,
+      "source": "reference/weapons-all/DefineSprite_457_gun_python/2.png",
+      "symbol": 457,
+      "frame": 2,
+      "sourceCrop": [
+        5,
+        35,
+        62,
+        62
+      ]
+    },
+    "m1911weak": {
+      "x": 468,
+      "y": 102,
+      "w": 40,
+      "h": 25,
+      "originX": 7.550000000000001,
+      "originY": 15.5,
+      "source": "reference/weapons-all/DefineSprite_606_gun_m1911weak/2.png",
+      "symbol": 606,
+      "frame": 2,
+      "sourceCrop": [
+        7,
+        0,
+        47,
+        25
+      ]
+    },
+    "instagib": {
+      "x": 218,
+      "y": 195,
+      "w": 102,
+      "h": 34,
+      "originX": 26.55,
+      "originY": 25.6,
+      "source": "reference/weapons-all/DefineSprite_461_gun_instagib/2.png",
+      "symbol": 461,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        102,
+        34
+      ]
+    },
+    "ak47": {
+      "x": 233,
+      "y": 114,
+      "w": 110,
+      "h": 33,
+      "originX": 33.4,
+      "originY": 16.2,
+      "source": "reference/weapons-all/DefineSprite_463_gun_ak47/2.png",
+      "symbol": 463,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        110,
+        33
+      ]
+    },
+    "hk": {
+      "x": 240,
+      "y": 37,
+      "w": 116,
+      "h": 33,
+      "originX": 35.8,
+      "originY": 23.75,
+      "source": "reference/weapons-all/DefineSprite_465_gun_hk/2.png",
+      "symbol": 465,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        116,
+        33
+      ]
+    },
+    "mp5k": {
+      "x": 2,
+      "y": 436,
+      "w": 72,
+      "h": 36,
+      "originX": 29.95,
+      "originY": 20.05,
+      "source": "reference/weapons-all/DefineSprite_467_gun_mp5k/2.png",
+      "symbol": 467,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        72,
+        36
+      ]
+    },
+    "ithaca": {
+      "x": 2,
+      "y": 339,
+      "w": 77,
+      "h": 22,
+      "originX": 9.25,
+      "originY": 11.5,
+      "source": "reference/weapons-all/DefineSprite_471_gun_ithaca/2.png",
+      "symbol": 471,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        77,
+        22
+      ]
+    },
+    "scar": {
+      "x": 355,
+      "y": 73,
+      "w": 111,
+      "h": 36,
+      "originX": 32.3,
+      "originY": 28.15,
+      "source": "reference/weapons-all/DefineSprite_473_gun_scar/2.png",
+      "symbol": 473,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        111,
+        36
+      ]
+    },
+    "usas": {
+      "x": 321,
+      "y": 254,
+      "w": 99,
+      "h": 33,
+      "originX": 33.55,
+      "originY": 25.05,
+      "source": "reference/weapons-all/DefineSprite_475_gun_usas/2.png",
+      "symbol": 475,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        99,
+        33
+      ]
+    },
+    "501": {
+      "x": 121,
+      "y": 67,
+      "w": 115,
+      "h": 30,
+      "originX": 30.55,
+      "originY": 22.0,
+      "source": "reference/weapons-all/DefineSprite_477_gun_501/2.png",
+      "symbol": 477,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        115,
+        30
+      ]
+    },
+    "mini14": {
+      "x": 114,
+      "y": 165,
+      "w": 108,
+      "h": 28,
+      "originX": 30.15,
+      "originY": 16.5,
+      "source": "reference/weapons-all/DefineSprite_114_gun_mini14/2.png",
+      "symbol": 114,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        108,
+        28
+      ]
+    },
+    "lever": {
+      "x": 170,
+      "y": 365,
+      "w": 80,
+      "h": 30,
+      "originX": 10.85,
+      "originY": 14.45,
+      "source": "reference/weapons-all/DefineSprite_481_gun_lever/2.png",
+      "symbol": 481,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        80,
+        30
+      ]
+    },
+    "p90": {
+      "x": 422,
+      "y": 254,
+      "w": 88,
+      "h": 29,
+      "originX": 42.35,
+      "originY": 23.1,
+      "source": "reference/weapons-all/DefineSprite_483_gun_p90/2.png",
+      "symbol": 483,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        88,
+        29
+      ]
+    },
+    "m17": {
+      "x": 409,
+      "y": 289,
+      "w": 91,
+      "h": 35,
+      "originX": 43.35,
+      "originY": 19.45,
+      "source": "reference/weapons-all/DefineSprite_485_gun_m17/2.png",
+      "symbol": 485,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        91,
+        35
+      ]
+    },
+    "bizon": {
+      "x": 86,
+      "y": 381,
+      "w": 79,
+      "h": 29,
+      "originX": 30.05,
+      "originY": 20.45,
+      "source": "reference/weapons-all/DefineSprite_487_gun_bizon/2.png",
+      "symbol": 487,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        79,
+        29
+      ]
+    },
+    "tommy": {
+      "x": 86,
+      "y": 412,
+      "w": 74,
+      "h": 26,
+      "originX": 15.45,
+      "originY": 14.7,
+      "source": "reference/weapons-all/DefineSprite_489_gun_tommy/2.png",
+      "symbol": 489,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        74,
+        26
+      ]
+    },
+    "ump": {
+      "x": 388,
+      "y": 326,
+      "w": 84,
+      "h": 42,
+      "originX": 37.7,
+      "originY": 21.35,
+      "source": "reference/weapons-all/DefineSprite_491_gun_ump/2.png",
+      "symbol": 491,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        84,
+        42
+      ]
+    },
+    "augsmg": {
+      "x": 2,
+      "y": 403,
+      "w": 82,
+      "h": 31,
+      "originX": 40.3,
+      "originY": 20.8,
+      "source": "reference/weapons-all/DefineSprite_493_gun_augsmg/2.png",
+      "symbol": 493,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        82,
+        31
+      ]
+    },
+    "mp5a3": {
+      "x": 286,
+      "y": 356,
+      "w": 84,
+      "h": 35,
+      "originX": 30.75,
+      "originY": 20.85,
+      "source": "reference/weapons-all/DefineSprite_495_gun_mp5a3/2.png",
+      "symbol": 495,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        84,
+        35
+      ]
+    },
+    "lusa": {
+      "x": 449,
+      "y": 171,
+      "w": 63,
+      "h": 36,
+      "originX": 16.35,
+      "originY": 20.1,
+      "source": "reference/weapons-all/DefineSprite_497_gun_lusa/2.png",
+      "symbol": 497,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        63,
+        36
+      ]
+    },
+    "m12": {
+      "x": 167,
+      "y": 397,
+      "w": 76,
+      "h": 39,
+      "originX": 31.55,
+      "originY": 18.1,
+      "source": "reference/weapons-all/DefineSprite_499_gun_m12/2.png",
+      "symbol": 499,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        76,
+        39
+      ]
+    },
+    "mas38": {
+      "x": 205,
+      "y": 294,
+      "w": 91,
+      "h": 34,
+      "originX": 41.75,
+      "originY": 17.3,
+      "source": "reference/weapons-all/DefineSprite_501_gun_mas38/2.png",
+      "symbol": 501,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        91,
+        34
+      ]
+    },
+    "aksu": {
+      "x": 2,
+      "y": 365,
+      "w": 82,
+      "h": 37,
+      "originX": 27.1,
+      "originY": 19.2,
+      "source": "reference/weapons-all/DefineSprite_503_gun_aksu/2.png",
+      "symbol": 503,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        82,
+        37
+      ]
+    },
+    "kriss": {
+      "x": 86,
+      "y": 339,
+      "w": 82,
+      "h": 40,
+      "originX": 32.95,
+      "originY": 15.5,
+      "source": "reference/weapons-all/DefineSprite_505_gun_kriss/2.png",
+      "symbol": 505,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        82,
+        40
+      ]
+    },
+    "mp9": {
+      "x": 457,
+      "y": 370,
+      "w": 50,
+      "h": 42,
+      "originX": 16.95,
+      "originY": 20.6,
+      "source": "reference/weapons-all/DefineSprite_507_gun_mp9/2.png",
+      "symbol": 507,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        50,
+        42
+      ]
+    },
+    "mas": {
+      "x": 105,
+      "y": 300,
+      "w": 91,
+      "h": 37,
+      "originX": 39.9,
+      "originY": 17.25,
+      "source": "reference/weapons-all/DefineSprite_509_gun_mas/2.png",
+      "symbol": 509,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        91,
+        37
+      ]
+    },
+    "awm": {
+      "x": 2,
+      "y": 2,
+      "w": 122,
+      "h": 31,
+      "originX": 30.1,
+      "originY": 22.0,
+      "source": "reference/weapons-all/DefineSprite_511_gun_awm/2.png",
+      "symbol": 511,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        122,
+        31
+      ]
+    },
+    "hecate": {
+      "x": 371,
+      "y": 35,
+      "w": 117,
+      "h": 36,
+      "originX": 28.85,
+      "originY": 27.85,
+      "source": "reference/weapons-all/DefineSprite_513_gun_hecate/2.png",
+      "symbol": 513,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        117,
+        36
+      ]
+    },
+    "m95": {
+      "x": 2,
+      "y": 35,
+      "w": 117,
+      "h": 35,
+      "originX": 41.2,
+      "originY": 25.1,
+      "source": "reference/weapons-all/DefineSprite_515_gun_m95/2.png",
+      "symbol": 515,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        117,
+        35
+      ]
+    },
+    "dsr": {
+      "x": 116,
+      "y": 132,
+      "w": 110,
+      "h": 31,
+      "originX": 40.1,
+      "originY": 23.5,
+      "source": "reference/weapons-all/DefineSprite_517_gun_dsr/2.png",
+      "symbol": 517,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        110,
+        31
+      ]
+    },
+    "ssg69": {
+      "x": 121,
+      "y": 35,
+      "w": 117,
+      "h": 30,
+      "originX": 27.8,
+      "originY": 19.0,
+      "source": "reference/weapons-all/DefineSprite_519_gun_ssg69/2.png",
+      "symbol": 519,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        2,
+        117,
+        32
+      ]
+    },
+    "lrs2": {
+      "x": 371,
+      "y": 2,
+      "w": 118,
+      "h": 31,
+      "originX": 32.95,
+      "originY": 21.5,
+      "source": "reference/weapons-all/DefineSprite_521_gun_lrs2/2.png",
+      "symbol": 521,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        118,
+        31
+      ]
+    },
+    "galatz": {
+      "x": 2,
+      "y": 154,
+      "w": 110,
+      "h": 32,
+      "originX": 30.65,
+      "originY": 23.2,
+      "source": "reference/weapons-all/DefineSprite_523_gun_galatz/2.png",
+      "symbol": 523,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        110,
+        32
+      ]
+    },
+    "vss": {
+      "x": 249,
+      "y": 2,
+      "w": 120,
+      "h": 33,
+      "originX": 41.4,
+      "originY": 23.8,
+      "source": "reference/weapons-all/DefineSprite_525_gun_vss/2.png",
+      "symbol": 525,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        120,
+        33
+      ]
+    },
+    "m76": {
+      "x": 126,
+      "y": 2,
+      "w": 121,
+      "h": 31,
+      "originX": 30.4,
+      "originY": 24.15,
+      "source": "reference/weapons-all/DefineSprite_527_gun_m76/2.png",
+      "symbol": 527,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        121,
+        31
+      ]
+    },
+    "sr25": {
+      "x": 2,
+      "y": 72,
+      "w": 115,
+      "h": 34,
+      "originX": 31.25,
+      "originY": 27.55,
+      "source": "reference/weapons-all/DefineSprite_529_gun_sr25/2.png",
+      "symbol": 529,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        115,
+        34
+      ]
+    },
+    "leversniper": {
+      "x": 2,
+      "y": 188,
+      "w": 107,
+      "h": 42,
+      "originX": 28.6,
+      "originY": 26.6,
+      "source": "reference/weapons-all/DefineSprite_531_gun_leversniper/2.png",
+      "symbol": 531,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        107,
+        42
+      ]
+    },
+    "sawnoff": {
+      "x": 2,
+      "y": 474,
+      "w": 72,
+      "h": 24,
+      "originX": 13.4,
+      "originY": 12.0,
+      "source": "reference/weapons-all/DefineSprite_538_gun_sawnoff/2.png",
+      "symbol": 538,
+      "frame": 2,
+      "sourceCrop": [
+        2,
+        12,
+        74,
+        36
+      ]
+    },
+    "ksg": {
+      "x": 372,
+      "y": 370,
+      "w": 83,
+      "h": 31,
+      "originX": 33.15,
+      "originY": 22.05,
+      "source": "reference/weapons-all/DefineSprite_542_gun_ksg/2.png",
+      "symbol": 542,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        83,
+        31
+      ]
+    },
+    "aa12": {
+      "x": 322,
+      "y": 213,
+      "w": 101,
+      "h": 39,
+      "originX": 33.75,
+      "originY": 28.65,
+      "source": "reference/weapons-all/DefineSprite_544_gun_aa12/2.png",
+      "symbol": 544,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        101,
+        39
+      ]
+    },
+    "jackhammer": {
+      "x": 2,
+      "y": 232,
+      "w": 104,
+      "h": 34,
+      "originX": 47.9,
+      "originY": 25.8,
+      "source": "reference/weapons-all/DefineSprite_546_gun_jackhammer/2.png",
+      "symbol": 546,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        104,
+        34
+      ]
+    },
+    "pm12": {
+      "x": 252,
+      "y": 393,
+      "w": 79,
+      "h": 31,
+      "originX": 6.75,
+      "originY": 16.0,
+      "source": "reference/weapons-all/DefineSprite_550_gun_pm12/2.png",
+      "symbol": 550,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        79,
+        31
+      ]
+    },
+    "870": {
+      "x": 312,
+      "y": 289,
+      "w": 95,
+      "h": 28,
+      "originX": 28.15,
+      "originY": 10.05,
+      "source": "reference/weapons-all/DefineSprite_554_gun_870/2.png",
+      "symbol": 554,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        95,
+        28
+      ]
+    },
+    "spas12": {
+      "x": 425,
+      "y": 213,
+      "w": 86,
+      "h": 31,
+      "originX": 7.2,
+      "originY": 19.9,
+      "source": "reference/weapons-all/DefineSprite_558_gun_spas12/2.png",
+      "symbol": 558,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        86,
+        31
+      ]
+    },
+    "saiga12": {
+      "x": 105,
+      "y": 272,
+      "w": 98,
+      "h": 26,
+      "originX": 28.95,
+      "originY": 15.85,
+      "source": "reference/weapons-all/DefineSprite_560_gun_saiga12/2.png",
+      "symbol": 560,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        98,
+        26
+      ]
+    },
+    "saiga20": {
+      "x": 218,
+      "y": 231,
+      "w": 101,
+      "h": 22,
+      "originX": 28.45,
+      "originY": 9.8,
+      "source": "reference/weapons-all/DefineSprite_562_gun_saiga20/2.png",
+      "symbol": 562,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        101,
+        22
+      ]
+    },
+    "spas97": {
+      "x": 198,
+      "y": 330,
+      "w": 86,
+      "h": 33,
+      "originX": 12.85,
+      "originY": 20.3,
+      "source": "reference/weapons-all/DefineSprite_567_gun_spas97/2.png",
+      "symbol": 567,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        86,
+        33
+      ]
+    },
+    "moss500": {
+      "x": 76,
+      "y": 440,
+      "w": 65,
+      "h": 29,
+      "originX": 7.7,
+      "originY": 14.85,
+      "source": "reference/weapons-all/DefineSprite_112_gun_moss500/2.png",
+      "symbol": 112,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        65,
+        29
+      ]
+    },
+    "mini": {
+      "x": 111,
+      "y": 195,
+      "w": 105,
+      "h": 44,
+      "originX": 5.2,
+      "originY": 15.1,
+      "source": "reference/weapons-all/DefineSprite_599_gun_mini/2.png",
+      "symbol": 599,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        105,
+        44
+      ]
+    },
+    "g36c": {
+      "x": 298,
+      "y": 319,
+      "w": 88,
+      "h": 35,
+      "originX": 31.6,
+      "originY": 19.75,
+      "source": "reference/weapons-all/DefineSprite_573_gun_g36c/2.png",
+      "symbol": 573,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        88,
+        35
+      ]
+    },
+    "rpk": {
+      "x": 238,
+      "y": 72,
+      "w": 115,
+      "h": 40,
+      "originX": 31.5,
+      "originY": 18.0,
+      "source": "reference/weapons-all/DefineSprite_575_gun_rpk/2.png",
+      "symbol": 575,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        115,
+        40
+      ]
+    },
+    "sig552": {
+      "x": 108,
+      "y": 241,
+      "w": 101,
+      "h": 29,
+      "originX": 29.9,
+      "originY": 20.0,
+      "source": "reference/weapons-all/DefineSprite_577_gun_sig552/2.png",
+      "symbol": 577,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        101,
+        29
+      ]
+    },
+    "galil": {
+      "x": 340,
+      "y": 171,
+      "w": 107,
+      "h": 40,
+      "originX": 31.45,
+      "originY": 23.15,
+      "source": "reference/weapons-all/DefineSprite_579_gun_galil/2.png",
+      "symbol": 579,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        107,
+        40
+      ]
+    },
+    "m4": {
+      "x": 211,
+      "y": 255,
+      "w": 99,
+      "h": 37,
+      "originX": 31.0,
+      "originY": 22.8,
+      "source": "reference/weapons-all/DefineSprite_582_gun_m4/2.png",
+      "symbol": 582,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        99,
+        37
+      ]
+    },
+    "hk33": {
+      "x": 119,
+      "y": 99,
+      "w": 112,
+      "h": 31,
+      "originX": 33.5,
+      "originY": 18.8,
+      "source": "reference/weapons-all/DefineSprite_584_gun_hk33/2.png",
+      "symbol": 584,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        112,
+        31
+      ]
+    },
+    "f2000": {
+      "x": 2,
+      "y": 301,
+      "w": 91,
+      "h": 36,
+      "originX": 43.45,
+      "originY": 20.35,
+      "source": "reference/weapons-all/DefineSprite_586_gun_f2000/2.png",
+      "symbol": 586,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        91,
+        36
+      ]
+    },
+    "scarh": {
+      "x": 2,
+      "y": 268,
+      "w": 101,
+      "h": 31,
+      "originX": 30.45,
+      "originY": 22.4,
+      "source": "reference/weapons-all/DefineSprite_588_gun_scarh/2.png",
+      "symbol": 588,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        101,
+        31
+      ]
+    },
+    "stoner": {
+      "x": 355,
+      "y": 111,
+      "w": 111,
+      "h": 58,
+      "originX": 34.65,
+      "originY": 39.6,
+      "source": "reference/weapons-all/DefineSprite_590_gun_stoner/2.png",
+      "symbol": 590,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        111,
+        58
+      ]
+    },
+    "m249": {
+      "x": 228,
+      "y": 149,
+      "w": 110,
+      "h": 44,
+      "originX": 35.55,
+      "originY": 24.5,
+      "source": "reference/weapons-all/DefineSprite_592_gun_m249/2.png",
+      "symbol": 592,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        110,
+        44
+      ]
+    },
+    "hbar": {
+      "x": 2,
+      "y": 108,
+      "w": 112,
+      "h": 44,
+      "originX": 36.6,
+      "originY": 20.8,
+      "source": "reference/weapons-all/DefineSprite_594_gun_hbar/2.png",
+      "symbol": 594,
+      "frame": 2,
+      "sourceCrop": [
+        0,
+        0,
+        112,
+        44
+      ]
+    }
+  }
+}

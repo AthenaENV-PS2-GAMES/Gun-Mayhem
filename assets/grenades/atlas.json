@@ -1,0 +1,58 @@
+{
+  "image": "assets/grenades/atlas.png",
+  "width": 256,
+  "height": 128,
+  "parts": {
+    "grenade": {
+      "x": 2,
+      "y": 2,
+      "w": 26,
+      "h": 51,
+      "originX": 12.95,
+      "originY": 32.05,
+      "source": "reference/grenades/DefineSprite_665_wep_grenade/1.png",
+      "symbol": 665,
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        26,
+        51
+      ]
+    },
+    "blast": {
+      "x": 30,
+      "y": 2,
+      "w": 100,
+      "h": 100,
+      "originX": 50.0,
+      "originY": 50.0,
+      "source": "reference/grenades/DefineSprite_308_fx_ex/1.png",
+      "symbol": 308,
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        100,
+        100
+      ]
+    },
+    "ring": {
+      "x": 132,
+      "y": 2,
+      "w": 100,
+      "h": 100,
+      "originX": 50.0,
+      "originY": 50.0,
+      "source": "reference/grenades/DefineSprite_306_fx_ex2/1.png",
+      "symbol": 306,
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        100,
+        100
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "image": "assets/fx/explosion.png",
+  "width": 256,
+  "height": 256,
+  "parts": {
+    "glow": {
+      "x": 2,
+      "y": 2,
+      "w": 128,
+      "h": 128,
+      "originX": 64.0,
+      "originY": 64.0,
+      "scale": 2.3438
+    },
+    "ring": {
+      "x": 132,
+      "y": 2,
+      "w": 100,
+      "h": 100,
+      "originX": 50.0,
+      "originY": 50.0,
+      "scale": 1.0
+    },
+    "disc": {
+      "x": 2,
+      "y": 132,
+      "w": 64,
+      "h": 64,
+      "originX": 32.0,
+      "originY": 32.0,
+      "scale": 1.5625
+    },
+    "shock": {
+      "x": 68,
+      "y": 132,
+      "w": 100,
+      "h": 50,
+      "originX": 50.0,
+      "originY": 25.0,
+      "scale": 1.0
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "image": "assets/fx/atlas.png",
+  "width": 256,
+  "height": 256,
+  "parts": {
+    "flash": {
+      "x": 2,
+      "y": 2,
+      "w": 100,
+      "h": 100,
+      "originX": 15.15,
+      "originY": 29.2
+    },
+    "puff": {
+      "x": 104,
+      "y": 2,
+      "w": 40,
+      "h": 40,
+      "originX": 20.0,
+      "originY": 20.0
+    },
+    "shadow": {
+      "x": 146,
+      "y": 2,
+      "w": 32,
+      "h": 32,
+      "originX": 16,
+      "originY": 16
+    },
+    "stain3": {
+      "x": 180,
+      "y": 2,
+      "w": 33,
+      "h": 28,
+      "originX": 11.95,
+      "originY": 12.3
+    },
+    "stain1": {
+      "x": 215,
+      "y": 2,
+      "w": 33,
+      "h": 26,
+      "originX": 12.95,
+      "originY": 15.3
+    },
+    "fire": {
+      "x": 2,
+      "y": 104,
+      "w": 20,
+      "h": 25,
+      "originX": 9.7,
+      "originY": 16.05
+    },
+    "mag2": {
+      "x": 24,
+      "y": 104,
+      "w": 9,
+      "h": 21,
+      "originX": 5.0,
+      "originY": 10.25
+    },
+    "deagle": {
+      "x": 35,
+      "y": 104,
+      "w": 44,
+      "h": 21,
+      "originX": 21.75,
+      "originY": 10.5
+    },
+    "mag3": {
+      "x": 81,
+      "y": 104,
+      "w": 12,
+      "h": 20,
+      "originX": 6.0,
+      "originY": 9.25
+    },
+    "stain2": {
+      "x": 95,
+      "y": 104,
+      "w": 27,
+      "h": 19,
+      "originX": 14.95,
+      "originY": 8.3
+    },
+    "mag1": {
+      "x": 124,
+      "y": 104,
+      "w": 11,
+      "h": 15,
+      "originX": 5.05,
+      "originY": 7.9
+    },
+    "pickup": {
+      "x": 137,
+      "y": 104,
+      "w": 13,
+      "h": 13,
+      "originX": 6.5,
+      "originY": 6.5
+    },
+    "flame": {
+      "x": 152,
+      "y": 104,
+      "w": 39,
+      "h": 12,
+      "originX": 23.35,
+      "originY": 8.25
+    },
+    "dust1": {
+      "x": 193,
+      "y": 104,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust2": {
+      "x": 205,
+      "y": 104,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust4": {
+      "x": 217,
+      "y": 104,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust5": {
+      "x": 229,
+      "y": 104,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust6": {
+      "x": 241,
+      "y": 104,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust7": {
+      "x": 2,
+      "y": 131,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust8": {
+      "x": 14,
+      "y": 131,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust9": {
+      "x": 26,
+      "y": 131,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust10": {
+      "x": 38,
+      "y": 131,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust11": {
+      "x": 50,
+      "y": 131,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "dust12": {
+      "x": 62,
+      "y": 131,
+      "w": 10,
+      "h": 11,
+      "originX": 5.0,
+      "originY": 5.55
+    },
+    "spark": {
+      "x": 74,
+      "y": 131,
+      "w": 11,
+      "h": 11,
+      "originX": 5.15,
+      "originY": 5.1
+    },
+    "package": {
+      "x": 87,
+      "y": 131,
+      "w": 17,
+      "h": 11,
+      "originX": 7.45,
+      "originY": 6.45
+    },
+    "dust3": {
+      "x": 106,
+      "y": 131,
+      "w": 8,
+      "h": 9,
+      "originX": 4.0,
+      "originY": 4.55
+    },
+    "dust13": {
+      "x": 116,
+      "y": 131,
+      "w": 8,
+      "h": 9,
+      "originX": 4.0,
+      "originY": 4.55
+    },
+    "speedloader": {
+      "x": 126,
+      "y": 131,
+      "w": 7,
+      "h": 9,
+      "originX": 4.8,
+      "originY": 4.45
+    },
+    "instatrail": {
+      "x": 135,
+      "y": 131,
+      "w": 30,
+      "h": 9,
+      "originX": 25.3,
+      "originY": 4.3
+    },
+    "blood": {
+      "x": 167,
+      "y": 131,
+      "w": 27,
+      "h": 8,
+      "originX": 22.25,
+      "originY": 4.0
+    },
+    "shell": {
+      "x": 196,
+      "y": 131,
+      "w": 11,
+      "h": 5,
+      "originX": 5.25,
+      "originY": 2.25
+    },
+    "shell2": {
+      "x": 209,
+      "y": 131,
+      "w": 14,
+      "h": 5,
+      "originX": 6.85,
+      "originY": 2.4
+    },
+    "shell3": {
+      "x": 225,
+      "y": 131,
+      "w": 11,
+      "h": 5,
+      "originX": 5.25,
+      "originY": 2.25
+    },
+    "shot": {
+      "x": 238,
+      "y": 131,
+      "w": 12,
+      "h": 5,
+      "originX": 5.7,
+      "originY": 2.5
+    },
+    "shot3": {
+      "x": 2,
+      "y": 144,
+      "w": 12,
+      "h": 5,
+      "originX": 5.7,
+      "originY": 2.5
+    },
+    "snowdot": {
+      "x": 16,
+      "y": 144,
+      "w": 5,
+      "h": 5,
+      "originX": 2.5,
+      "originY": 2.5
+    },
+    "shell4": {
+      "x": 23,
+      "y": 144,
+      "w": 8,
+      "h": 4,
+      "originX": 3.55,
+      "originY": 1.6
+    }
+  }
+}

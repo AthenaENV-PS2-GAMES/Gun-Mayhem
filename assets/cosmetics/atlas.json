@@ -1,0 +1,1487 @@
+{
+  "image": "assets/cosmetics/atlas.png",
+  "width": 512,
+  "height": 448,
+  "scale": 0.8,
+  "parts": {
+    "cyan_body": {
+      "x": 2,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 2,
+      "source": "reference/cosmetics/DefineSprite_205/2.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "blue_body": {
+      "x": 46,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 3,
+      "source": "reference/cosmetics/DefineSprite_205/3.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "violet_body": {
+      "x": 90,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 4,
+      "source": "reference/cosmetics/DefineSprite_205/4.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "pink_body": {
+      "x": 134,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 5,
+      "source": "reference/cosmetics/DefineSprite_205/5.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "coral_body": {
+      "x": 178,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 6,
+      "source": "reference/cosmetics/DefineSprite_205/6.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "red_body": {
+      "x": 222,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 7,
+      "source": "reference/cosmetics/DefineSprite_205/7.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "yellow_body": {
+      "x": 266,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 8,
+      "source": "reference/cosmetics/DefineSprite_205/8.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "orange_body": {
+      "x": 310,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 9,
+      "source": "reference/cosmetics/DefineSprite_205/9.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "lime_body": {
+      "x": 354,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 10,
+      "source": "reference/cosmetics/DefineSprite_205/10.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "green_body": {
+      "x": 398,
+      "y": 2,
+      "w": 42,
+      "h": 67,
+      "originX": 21.0,
+      "originY": 33.1,
+      "symbol": 205,
+      "frame": 11,
+      "source": "reference/cosmetics/DefineSprite_205/11.png",
+      "sourceCrop": [
+        0,
+        0,
+        42,
+        67
+      ]
+    },
+    "cyan_head": {
+      "x": 442,
+      "y": 2,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 2,
+      "source": "reference/cosmetics/DefineSprite_237/2.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "blue_head": {
+      "x": 2,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 3,
+      "source": "reference/cosmetics/DefineSprite_237/3.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "violet_head": {
+      "x": 42,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 4,
+      "source": "reference/cosmetics/DefineSprite_237/4.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "pink_head": {
+      "x": 82,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 5,
+      "source": "reference/cosmetics/DefineSprite_237/5.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "coral_head": {
+      "x": 122,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 6,
+      "source": "reference/cosmetics/DefineSprite_237/6.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "red_head": {
+      "x": 162,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 7,
+      "source": "reference/cosmetics/DefineSprite_237/7.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "yellow_head": {
+      "x": 202,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 8,
+      "source": "reference/cosmetics/DefineSprite_237/8.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "orange_head": {
+      "x": 242,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 9,
+      "source": "reference/cosmetics/DefineSprite_237/9.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "lime_head": {
+      "x": 282,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 10,
+      "source": "reference/cosmetics/DefineSprite_237/10.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "green_head": {
+      "x": 322,
+      "y": 71,
+      "w": 38,
+      "h": 38,
+      "originX": 18.25,
+      "originY": 19.3,
+      "symbol": 237,
+      "frame": 11,
+      "source": "reference/cosmetics/DefineSprite_237/11.png",
+      "sourceCrop": [
+        0,
+        0,
+        38,
+        38
+      ]
+    },
+    "eyes_6": {
+      "x": 362,
+      "y": 71,
+      "w": 29,
+      "h": 29,
+      "originX": 0.75,
+      "originY": 21.6,
+      "symbol": 281,
+      "frame": 6,
+      "source": "reference/parts/DefineSprite_281/6.png",
+      "sourceCrop": [
+        7,
+        11,
+        36,
+        40
+      ]
+    },
+    "eyes_15": {
+      "x": 393,
+      "y": 71,
+      "w": 31,
+      "h": 28,
+      "originX": 2.75,
+      "originY": 32.6,
+      "symbol": 281,
+      "frame": 15,
+      "source": "reference/parts/DefineSprite_281/15.png",
+      "sourceCrop": [
+        5,
+        0,
+        36,
+        28
+      ]
+    },
+    "eyes_17": {
+      "x": 426,
+      "y": 71,
+      "w": 27,
+      "h": 19,
+      "originX": -1.25,
+      "originY": 15.600000000000001,
+      "symbol": 281,
+      "frame": 17,
+      "source": "reference/parts/DefineSprite_281/17.png",
+      "sourceCrop": [
+        9,
+        17,
+        36,
+        36
+      ]
+    },
+    "eyes_22": {
+      "x": 455,
+      "y": 71,
+      "w": 27,
+      "h": 17,
+      "originX": -1.25,
+      "originY": 20.6,
+      "symbol": 281,
+      "frame": 22,
+      "source": "reference/parts/DefineSprite_281/22.png",
+      "sourceCrop": [
+        9,
+        12,
+        36,
+        29
+      ]
+    },
+    "cyan_foot": {
+      "x": 484,
+      "y": 71,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 2,
+      "source": "reference/cosmetics/DefineSprite_188/2.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "blue_foot": {
+      "x": 2,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 3,
+      "source": "reference/cosmetics/DefineSprite_188/3.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "violet_foot": {
+      "x": 29,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 4,
+      "source": "reference/cosmetics/DefineSprite_188/4.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "pink_foot": {
+      "x": 56,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 5,
+      "source": "reference/cosmetics/DefineSprite_188/5.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "coral_foot": {
+      "x": 83,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 6,
+      "source": "reference/cosmetics/DefineSprite_188/6.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "red_foot": {
+      "x": 110,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 7,
+      "source": "reference/cosmetics/DefineSprite_188/7.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "yellow_foot": {
+      "x": 137,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 8,
+      "source": "reference/cosmetics/DefineSprite_188/8.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "orange_foot": {
+      "x": 164,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 9,
+      "source": "reference/cosmetics/DefineSprite_188/9.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "lime_foot": {
+      "x": 191,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 10,
+      "source": "reference/cosmetics/DefineSprite_188/10.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "green_foot": {
+      "x": 218,
+      "y": 111,
+      "w": 25,
+      "h": 15,
+      "originX": 1.0,
+      "originY": 1.0,
+      "symbol": 188,
+      "frame": 11,
+      "source": "reference/cosmetics/DefineSprite_188/11.png",
+      "sourceCrop": [
+        0,
+        0,
+        25,
+        15
+      ]
+    },
+    "cyan_hand": {
+      "x": 245,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 2,
+      "source": "reference/cosmetics/DefineSprite_111/2.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "blue_hand": {
+      "x": 261,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 3,
+      "source": "reference/cosmetics/DefineSprite_111/3.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "violet_hand": {
+      "x": 277,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 4,
+      "source": "reference/cosmetics/DefineSprite_111/4.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "pink_hand": {
+      "x": 293,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 5,
+      "source": "reference/cosmetics/DefineSprite_111/5.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "coral_hand": {
+      "x": 309,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 6,
+      "source": "reference/cosmetics/DefineSprite_111/6.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "red_hand": {
+      "x": 325,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 7,
+      "source": "reference/cosmetics/DefineSprite_111/7.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "yellow_hand": {
+      "x": 341,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 8,
+      "source": "reference/cosmetics/DefineSprite_111/8.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "orange_hand": {
+      "x": 357,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 9,
+      "source": "reference/cosmetics/DefineSprite_111/9.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "lime_hand": {
+      "x": 373,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 10,
+      "source": "reference/cosmetics/DefineSprite_111/10.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "green_hand": {
+      "x": 389,
+      "y": 111,
+      "w": 14,
+      "h": 14,
+      "originX": 7.0,
+      "originY": 7.0,
+      "symbol": 111,
+      "frame": 11,
+      "source": "reference/cosmetics/DefineSprite_111/11.png",
+      "sourceCrop": [
+        0,
+        0,
+        14,
+        14
+      ]
+    },
+    "eyes_19": {
+      "x": 405,
+      "y": 111,
+      "w": 28,
+      "h": 13,
+      "originX": -1.25,
+      "originY": 17.6,
+      "symbol": 281,
+      "frame": 19,
+      "source": "reference/parts/DefineSprite_281/19.png",
+      "sourceCrop": [
+        9,
+        15,
+        37,
+        28
+      ]
+    },
+    "eyes_21": {
+      "x": 435,
+      "y": 111,
+      "w": 28,
+      "h": 13,
+      "originX": -1.25,
+      "originY": 17.6,
+      "symbol": 281,
+      "frame": 21,
+      "source": "reference/parts/DefineSprite_281/21.png",
+      "sourceCrop": [
+        9,
+        15,
+        37,
+        28
+      ]
+    },
+    "eyes_8": {
+      "x": 465,
+      "y": 111,
+      "w": 27,
+      "h": 12,
+      "originX": -1.25,
+      "originY": 16.6,
+      "symbol": 281,
+      "frame": 8,
+      "source": "reference/parts/DefineSprite_281/8.png",
+      "sourceCrop": [
+        9,
+        16,
+        36,
+        28
+      ]
+    },
+    "eyes": {
+      "x": 2,
+      "y": 128,
+      "w": 27,
+      "h": 11,
+      "originX": -1.25,
+      "originY": 15.600000000000001,
+      "symbol": 281,
+      "frame": 1,
+      "source": "reference/parts/DefineSprite_281/1.png",
+      "sourceCrop": [
+        9,
+        17,
+        36,
+        28
+      ]
+    },
+    "shirt_14": {
+      "x": 2,
+      "y": 226,
+      "w": 50,
+      "h": 63,
+      "originX": 22.45,
+      "originY": 30.3,
+      "symbol": 224,
+      "frame": 14,
+      "source": "reference/cosmetics/DefineSprite_224/14.png",
+      "sourceCrop": [
+        0,
+        0,
+        50,
+        63
+      ]
+    },
+    "shirt_13": {
+      "x": 54,
+      "y": 226,
+      "w": 43,
+      "h": 61,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 13,
+      "source": "reference/cosmetics/DefineSprite_224/13.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        63
+      ]
+    },
+    "shirt_8": {
+      "x": 99,
+      "y": 226,
+      "w": 43,
+      "h": 60,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 8,
+      "source": "reference/cosmetics/DefineSprite_224/8.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        62
+      ]
+    },
+    "shirt_9": {
+      "x": 144,
+      "y": 226,
+      "w": 44,
+      "h": 57,
+      "originX": 22.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 9,
+      "source": "reference/cosmetics/DefineSprite_224/9.png",
+      "sourceCrop": [
+        0,
+        2,
+        44,
+        59
+      ]
+    },
+    "hat_16": {
+      "x": 190,
+      "y": 226,
+      "w": 52,
+      "h": 55,
+      "originX": 24.65,
+      "originY": 17.0,
+      "symbol": 269,
+      "frame": 16,
+      "source": "reference/cosmetics/DefineSprite_269/16.png",
+      "sourceCrop": [
+        18,
+        13,
+        70,
+        68
+      ]
+    },
+    "shirt_1": {
+      "x": 244,
+      "y": 226,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 1,
+      "source": "reference/cosmetics/DefineSprite_224/1.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_2": {
+      "x": 289,
+      "y": 226,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 2,
+      "source": "reference/cosmetics/DefineSprite_224/2.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_3": {
+      "x": 334,
+      "y": 226,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 3,
+      "source": "reference/cosmetics/DefineSprite_224/3.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_4": {
+      "x": 379,
+      "y": 226,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 4,
+      "source": "reference/cosmetics/DefineSprite_224/4.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_5": {
+      "x": 424,
+      "y": 226,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 5,
+      "source": "reference/cosmetics/DefineSprite_224/5.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_6": {
+      "x": 2,
+      "y": 291,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 6,
+      "source": "reference/cosmetics/DefineSprite_224/6.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_10": {
+      "x": 47,
+      "y": 291,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 10,
+      "source": "reference/cosmetics/DefineSprite_224/10.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_11": {
+      "x": 92,
+      "y": 291,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 11,
+      "source": "reference/cosmetics/DefineSprite_224/11.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_12": {
+      "x": 137,
+      "y": 291,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 12,
+      "source": "reference/cosmetics/DefineSprite_224/12.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_15": {
+      "x": 182,
+      "y": 291,
+      "w": 43,
+      "h": 55,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 15,
+      "source": "reference/cosmetics/DefineSprite_224/15.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        57
+      ]
+    },
+    "shirt_7": {
+      "x": 227,
+      "y": 291,
+      "w": 43,
+      "h": 54,
+      "originX": 21.45,
+      "originY": 28.3,
+      "symbol": 224,
+      "frame": 7,
+      "source": "reference/cosmetics/DefineSprite_224/7.png",
+      "sourceCrop": [
+        1,
+        2,
+        44,
+        56
+      ]
+    },
+    "hat_12": {
+      "x": 272,
+      "y": 291,
+      "w": 50,
+      "h": 50,
+      "originX": 23.65,
+      "originY": 23.0,
+      "symbol": 269,
+      "frame": 12,
+      "source": "reference/cosmetics/DefineSprite_269/12.png",
+      "sourceCrop": [
+        19,
+        7,
+        69,
+        57
+      ]
+    },
+    "hat_8": {
+      "x": 324,
+      "y": 291,
+      "w": 61,
+      "h": 48,
+      "originX": 32.65,
+      "originY": 10.0,
+      "symbol": 269,
+      "frame": 8,
+      "source": "reference/cosmetics/DefineSprite_269/8.png",
+      "sourceCrop": [
+        10,
+        20,
+        71,
+        68
+      ]
+    },
+    "hat_22": {
+      "x": 387,
+      "y": 291,
+      "w": 52,
+      "h": 47,
+      "originX": 25.65,
+      "originY": 11.0,
+      "symbol": 269,
+      "frame": 22,
+      "source": "reference/cosmetics/DefineSprite_269/22.png",
+      "sourceCrop": [
+        17,
+        19,
+        69,
+        66
+      ]
+    },
+    "hat_9": {
+      "x": 441,
+      "y": 291,
+      "w": 48,
+      "h": 42,
+      "originX": 25.65,
+      "originY": 30.0,
+      "symbol": 269,
+      "frame": 9,
+      "source": "reference/cosmetics/DefineSprite_269/9.png",
+      "sourceCrop": [
+        17,
+        0,
+        65,
+        42
+      ]
+    },
+    "hat_7": {
+      "x": 2,
+      "y": 348,
+      "w": 74,
+      "h": 34,
+      "originX": 41.65,
+      "originY": 15.0,
+      "symbol": 269,
+      "frame": 7,
+      "source": "reference/cosmetics/DefineSprite_269/7.png",
+      "sourceCrop": [
+        1,
+        15,
+        75,
+        49
+      ]
+    },
+    "hat_23": {
+      "x": 78,
+      "y": 348,
+      "w": 53,
+      "h": 34,
+      "originX": 24.65,
+      "originY": 16.0,
+      "symbol": 269,
+      "frame": 23,
+      "source": "reference/cosmetics/DefineSprite_269/23.png",
+      "sourceCrop": [
+        18,
+        14,
+        71,
+        48
+      ]
+    },
+    "hat_3": {
+      "x": 133,
+      "y": 348,
+      "w": 51,
+      "h": 34,
+      "originX": 33.65,
+      "originY": 11.0,
+      "symbol": 269,
+      "frame": 3,
+      "source": "reference/cosmetics/DefineSprite_269/3.png",
+      "sourceCrop": [
+        9,
+        19,
+        60,
+        53
+      ]
+    },
+    "hat_6": {
+      "x": 186,
+      "y": 348,
+      "w": 50,
+      "h": 34,
+      "originX": 26.65,
+      "originY": 23.0,
+      "symbol": 269,
+      "frame": 6,
+      "source": "reference/cosmetics/DefineSprite_269/6.png",
+      "sourceCrop": [
+        16,
+        7,
+        66,
+        41
+      ]
+    },
+    "hat_13": {
+      "x": 238,
+      "y": 348,
+      "w": 43,
+      "h": 33,
+      "originX": 22.65,
+      "originY": 6.0,
+      "symbol": 269,
+      "frame": 13,
+      "source": "reference/cosmetics/DefineSprite_269/13.png",
+      "sourceCrop": [
+        20,
+        24,
+        63,
+        57
+      ]
+    },
+    "hat_2": {
+      "x": 283,
+      "y": 348,
+      "w": 37,
+      "h": 33,
+      "originX": 14.649999999999999,
+      "originY": 22.0,
+      "symbol": 269,
+      "frame": 2,
+      "source": "reference/cosmetics/DefineSprite_269/2.png",
+      "sourceCrop": [
+        28,
+        8,
+        65,
+        41
+      ]
+    },
+    "hat_15": {
+      "x": 322,
+      "y": 348,
+      "w": 60,
+      "h": 30,
+      "originX": 30.65,
+      "originY": 17.0,
+      "symbol": 269,
+      "frame": 15,
+      "source": "reference/cosmetics/DefineSprite_269/15.png",
+      "sourceCrop": [
+        12,
+        13,
+        72,
+        43
+      ]
+    },
+    "hat_14": {
+      "x": 384,
+      "y": 348,
+      "w": 50,
+      "h": 30,
+      "originX": 26.65,
+      "originY": 18.0,
+      "symbol": 269,
+      "frame": 14,
+      "source": "reference/cosmetics/DefineSprite_269/14.png",
+      "sourceCrop": [
+        16,
+        12,
+        66,
+        42
+      ]
+    },
+    "shirt_30": {
+      "x": 436,
+      "y": 348,
+      "w": 20,
+      "h": 29,
+      "originX": 1.4499999999999993,
+      "originY": 3.3000000000000007,
+      "symbol": 224,
+      "frame": 30,
+      "source": "reference/cosmetics/DefineSprite_224/30.png",
+      "sourceCrop": [
+        21,
+        27,
+        41,
+        56
+      ]
+    },
+    "hat_10": {
+      "x": 2,
+      "y": 384,
+      "w": 65,
+      "h": 26,
+      "originX": 33.65,
+      "originY": 12.0,
+      "symbol": 269,
+      "frame": 10,
+      "source": "reference/cosmetics/DefineSprite_269/10.png",
+      "sourceCrop": [
+        9,
+        18,
+        74,
+        44
+      ]
+    },
+    "hat_21": {
+      "x": 69,
+      "y": 384,
+      "w": 45,
+      "h": 26,
+      "originX": 21.65,
+      "originY": 9.0,
+      "symbol": 269,
+      "frame": 21,
+      "source": "reference/cosmetics/DefineSprite_269/21.png",
+      "sourceCrop": [
+        21,
+        21,
+        66,
+        47
+      ]
+    },
+    "hat_20": {
+      "x": 116,
+      "y": 384,
+      "w": 62,
+      "h": 25,
+      "originX": 42.65,
+      "originY": 12.0,
+      "symbol": 269,
+      "frame": 20,
+      "source": "reference/cosmetics/DefineSprite_269/20.png",
+      "sourceCrop": [
+        0,
+        18,
+        62,
+        43
+      ]
+    },
+    "hat_18": {
+      "x": 180,
+      "y": 384,
+      "w": 47,
+      "h": 25,
+      "originX": 24.65,
+      "originY": 11.0,
+      "symbol": 269,
+      "frame": 18,
+      "source": "reference/cosmetics/DefineSprite_269/18.png",
+      "sourceCrop": [
+        18,
+        19,
+        65,
+        44
+      ]
+    },
+    "hat_17": {
+      "x": 229,
+      "y": 384,
+      "w": 70,
+      "h": 24,
+      "originX": 36.65,
+      "originY": 14.0,
+      "symbol": 269,
+      "frame": 17,
+      "source": "reference/cosmetics/DefineSprite_269/17.png",
+      "sourceCrop": [
+        6,
+        16,
+        76,
+        40
+      ]
+    },
+    "hat_19": {
+      "x": 301,
+      "y": 384,
+      "w": 36,
+      "h": 22,
+      "originX": 17.65,
+      "originY": 5.0,
+      "symbol": 269,
+      "frame": 19,
+      "source": "reference/cosmetics/DefineSprite_269/19.png",
+      "sourceCrop": [
+        25,
+        25,
+        61,
+        47
+      ]
+    },
+    "hat_4": {
+      "x": 339,
+      "y": 384,
+      "w": 49,
+      "h": 20,
+      "originX": 24.65,
+      "originY": 10.0,
+      "symbol": 269,
+      "frame": 4,
+      "source": "reference/cosmetics/DefineSprite_269/4.png",
+      "sourceCrop": [
+        18,
+        20,
+        67,
+        40
+      ]
+    },
+    "hat_5": {
+      "x": 390,
+      "y": 384,
+      "w": 49,
+      "h": 20,
+      "originX": 24.65,
+      "originY": 10.0,
+      "symbol": 269,
+      "frame": 5,
+      "source": "reference/cosmetics/DefineSprite_269/5.png",
+      "sourceCrop": [
+        18,
+        20,
+        67,
+        40
+      ]
+    },
+    "hat_24": {
+      "x": 441,
+      "y": 384,
+      "w": 34,
+      "h": 20,
+      "originX": 16.65,
+      "originY": 10.0,
+      "symbol": 269,
+      "frame": 24,
+      "source": "reference/cosmetics/DefineSprite_269/24.png",
+      "sourceCrop": [
+        26,
+        20,
+        60,
+        40
+      ]
+    },
+    "hat_11": {
+      "x": 2,
+      "y": 412,
+      "w": 51,
+      "h": 16,
+      "originX": 32.65,
+      "originY": 6.0,
+      "symbol": 269,
+      "frame": 11,
+      "source": "reference/cosmetics/DefineSprite_269/11.png",
+      "sourceCrop": [
+        10,
+        24,
+        61,
+        40
+      ]
+    }
+  }
+}
