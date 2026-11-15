@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 import {WEAPONS} from './weapons.js';
 
 const LAND_DX=64,LAND_DY=16,NOLAND_DY=24;
