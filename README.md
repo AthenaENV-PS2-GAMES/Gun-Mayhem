@@ -1,46 +1,46 @@
-# Gun Mayhem para AthenaENV / PS2
+# Gun Mayhem for AthenaENV / PS2
 
-Port de **Gun Mayhem** (Flash) para o PS2, escrito em JavaScript sobre o AthenaENV.
+A port of **Gun Mayhem** (Flash) to the PS2, written in JavaScript on top of AthenaENV.
 
-## Conteúdo
+## Features
 
-- **Modos:** Last Man Standing, Last Man Standing (Team), Gun Game, 1 Hit 1 Kill, Duck Survival e a **campanha** de 10 níveis
-  (com progressão, desbloqueios de armas e perks, co-op para dois).
-- **Mundo:** 12 mapas, 65 armas, dinamites, 7 power-ups, perks, caixas de arma, salto duplo e plataformas atravessáveis.
-- **Multiplayer local:** 2 a 4 jogadores (humanos e/ou CPUs; o 3.º e o 4.º controle precisam de multitap), com lobby, personalização
-  (10 cores, 15 camisas, 24 chapéus, arma inicial, perk) e câmera compartilhada.
-- **Menus:** menu principal, Gun Library (com TEST WEAPON), opções (música, efeitos e botões por jogador) e créditos.
-- **Salvamento** no cartão de memória (`mc0:/GM2LOBBY`): lobby, campanha e opções.
+- **Modes:** Last Man Standing, Last Man Standing (Team), Gun Game, 1 Hit 1 Kill, Duck Survival and a 10-level **campaign**
+  (progression, weapon and perk unlocks, two-player co-op).
+- **World:** 12 maps, 65 weapons, dynamite, 7 power-ups, perks, weapon boxes, double jump and drop-through platforms.
+- **Local multiplayer:** 2 to 4 players (humans and/or CPUs; the 3rd and 4th controllers need a multitap) with a lobby, customization
+  (10 colors, 15 shirts, 24 hats, starting weapon, perk) and a shared camera.
+- **Menus:** main menu, Gun Library (with TEST WEAPON), options (music, sound effects and per-player buttons) and credits.
+- **Saves** on the memory card (`mc0:/GM2LOBBY`): lobby, campaign and options.
 
-## Executar
+## Running
 
-Coloque o `athena.elf` do AthenaENV nesta pasta (ele não faz parte do repositório) e rode-o com `athena.ini` e `main.js` no mesmo diretório,
-no PS2 ou no PCSX2:
+Put the AthenaENV `athena.elf` in this folder (it is not part of the repository) and run it with `athena.ini` and `main.js` in the same
+directory, on a PS2 or in PCSX2:
 
 ```sh
-pcsx2 -batch -elf athena.elf   # exemplo: o caminho do ELF e as opções dependem da sua instalação
+pcsx2 -batch -elf athena.elf   # example: the ELF path and the options depend on your setup
 ```
 
-## Controles (padrão, mudam em OPTIONS)
+## Controls (defaults, changeable in OPTIONS)
 
-| Ação | DualShock 2 |
+| Action | DualShock 2 |
 | --- | --- |
-| Andar | Direcional / analógico esquerdo |
-| Pular (duplo) / jetpack | X ou cima |
-| Atirar | Quadrado ou R1 |
-| Descer de plataforma / abrir o baú (Duck Survival) | Baixo |
-| Carregar e lançar dinamite | Segurar e soltar R2 |
-| Pausar / confirmar | START |
-| Voltar | Círculo |
+| Move | D-pad / left stick |
+| Jump (double) / jetpack | X or Up |
+| Shoot | Square or R1 |
+| Drop through a platform / open the chest (Duck Survival) | Down |
+| Charge and throw dynamite | Hold and release R2 |
+| Pause / confirm | START |
+| Back | Circle |
 
-## Estado
+## Status
 
-Testado no PCSX2. **Não foi testado em PS2 real, nem com multitap e quatro controles físicos.**
-Diferenças conscientes em relação ao original: sem tecla Insert (modo torneio), sem edição do nome dos jogadores e sem a opção QUALITY.
+Tested in PCSX2. **Not tested on real PS2 hardware, nor with a multitap and four physical controllers.**
+Deliberate differences from the original: no Insert key (tournament mode), no player name editing and no QUALITY option.
 
-## Créditos
+## Credits
 
-Jogo original: Kevin Gu (programação e design), Arvin Eksiri (arte), música de Kevin MacLeod.
-Port para PS2: Gibran Khalil, usando AthenaENV.
+Original game: Kevin Gu (programming and design), Arvin Eksiri (art), music by Kevin MacLeod.
+PS2 port: Gibran Khalil, using AthenaENV.
 
-Projeto de fã, sem fins comerciais. O jogo, a arte, os sons e a música originais pertencem aos seus autores.
+A fan project with no commercial purpose. The original game, art, sounds and music belong to their authors.
