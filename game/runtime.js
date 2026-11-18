@@ -60,7 +60,7 @@ import {
 
 import {buildLayout, moveCursor, unlockLevelOf, statBars, STAT_LABELS, TILE} from './library.js';
 import {CRATE_SCALE} from './idle.js';
-import {createIntro, stepIntro, introItems, dueSounds, INTRO_SOUND_IDS} from './intro.js';
+import {createIntro, stepIntro, introItems, dueSounds, armorPagesAhead, INTRO_SOUND_IDS} from './intro.js';
 
 import {
     ACTIONS,
@@ -1034,12 +1034,25 @@ export function startGame(options = {}) {
     let intro = null,
         introImage = null,
         introMeta = null,
-        introSfx = null;
+        introSfx = null,
+        introLoader = null,
+        introPages = {},
+        introShown = [],
+        introStalls = 0,
+        introStallFrames = [],
+        introStarted = false,
+        introWait = 0;
 
     function enterIntro() {
         introMeta = JSON.parse(std.loadFile('assets/intro/intro.json'));
         introImage = new Image(introMeta.atlas.image);
         intro = createIntro(introMeta);
+        introLoader = new ImageList();
+        introPages = {};
+        introShown = [];
+        introStarted = false;
+        introWait = 0;
+        queueIntroPages();
         screen = 'intro';
         paused = false;
         introSfx = {};
@@ -1049,7 +1062,6 @@ export function startGame(options = {}) {
             introSfx[id].volume = 65;
         }
 
-        playIntroSounds();
         console.log('GM2_INTRO');
     }
 
@@ -1058,6 +1070,17 @@ export function startGame(options = {}) {
             introImage.free();
             introImage = null;
         }
+
+        for (const id of Object.keys(introPages)) {
+            introPages[id].free();
+        }
+
+        introPages = {};
+        introLoader = null;
+        introShown = [];
+        console.log('GM2_INTRO_STALLS ' + introStalls + ' at ' + introStallFrames.join(','));
+        introStalls = 0;
+        introStallFrames = [];
 
         if (introSfx) {
             for (const id of INTRO_SOUND_IDS) {
@@ -1070,6 +1093,23 @@ export function startGame(options = {}) {
 
         intro = null;
         enterMain();
+    }
+
+    function queueIntroPages() {
+        for (const id of armorPagesAhead(intro, 14)) {
+            if (!introPages[id]) {
+                introPages[id] = introLoader.load(introMeta.pages[id].file);
+            }
+        }
+
+        const keepFrom = introShown.length ? Math.min(...introShown.map(t => t.tile.page)) : 0;
+
+        for (const id of Object.keys(introPages)) {
+            if (Number(id) < keepFrom) {
+                introPages[id].free();
+                delete introPages[id];
+            }
+        }
     }
 
     function playIntroSounds() {
@@ -1091,6 +1131,24 @@ export function startGame(options = {}) {
             return;
         }
 
+        queueIntroPages();
+        introLoader.process(1);
+
+        if (!introStarted) {
+            introStarted = armorPagesAhead(intro, 2).every(id => introPages[id] && introPages[id].ready());
+
+            if (!introStarted) {
+                introWait += dt;
+
+                if (introWait > 5) {
+                    console.log('GM2_INTRO_SKIP no pictures');
+                    leaveIntro();
+                }
+
+                return;
+            }
+        }
+
         stepIntro(intro, dt);
         playIntroSounds();
 
@@ -1109,9 +1167,45 @@ export function startGame(options = {}) {
             return;
         }
 
-        const white = Color.new(128, 128, 128, 128);
+        const white = Color.new(128, 128, 128, 128),
+            items = introItems(intro),
+            armor = items.filter(it => it.kind === 'frame');
 
-        for (const it of introItems(intro)) {
+        if (armor.length) {
+            const ready = armor.every(it => {
+                const page = introPages[introMeta.tiles[it.tile].page];
+
+                return page && page.ready();
+            });
+
+            if (ready) {
+                introShown = armor.map(it => ({tile: introMeta.tiles[it.tile], img: introPages[introMeta.tiles[it.tile].page]}));
+            } else {
+                introStalls++;
+
+                if (introStallFrames.length < 12) {
+                    introStallFrames.push(Math.floor(intro.frame));
+                }
+            }
+
+            for (const t of introShown) {
+                introOptions.width = t.tile.w;
+                introOptions.height = t.tile.h;
+                introOptions.startx = t.tile.sx;
+                introOptions.starty = t.tile.sy;
+                introOptions.endx = t.tile.sx + t.tile.w;
+                introOptions.endy = t.tile.sy + t.tile.h;
+                introOptions.angle = 0;
+                introOptions.color = white;
+                t.img.draw(Math.round(X(introMeta.origin[0]) + t.tile.x), Math.round(Y(introMeta.origin[1]) + t.tile.y), introOptions);
+            }
+        }
+
+        for (const it of items) {
+            if (it.kind === 'frame') {
+                continue;
+            }
+
             const a = Math.max(0, Math.min(128, Math.round(it.alpha * 128)));
 
             if (a <= 0) {
@@ -5223,6 +5317,7 @@ export function startGame(options = {}) {
             },
             draw(alpha) {
                 sceneFrames++;
+
                 lapBegin();
                 prof.frames++;
 

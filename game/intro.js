@@ -16,7 +16,6 @@ export const INTRO_SOUND_IDS = Object.freeze([...new Set(INTRO_SOUNDS.map(e => e
 
 const ENTER = 224;
 const FADE_STEPS = 10;
-const LOGO_FADE_FROM = 195;
 
 export function createIntro(meta) {
     return {meta, frame: 0, done: false, played: 0};
@@ -52,38 +51,32 @@ export function stepIntro(intro, dt) {
 const part = (name, x, y, sx = 1, sy = 1, angle = 0, alpha = 1) => ({kind: 'part', name, x, y, sx, sy, angle, alpha});
 const rect = (x0, y0, x1, y1, alpha = 1) => ({kind: 'rect', x0, y0, x1, y1, alpha});
 
-function logoItems(m, n) {
-    const [ox, oy] = m.origin,
-        items = [];
+const frameItem = tile => ({kind: 'frame', tile, alpha: 1});
 
-    if (n < m.logoFrom) {
-        for (const [a, b, tx, ty] of m.swords[n - m.swordFrom]) {
-            const k = Math.hypot(a, b);
+function armorTiles(m, n) {
+    return m.frames[n - m.frameFrom] || [];
+}
 
-            items.push(part('sword', ox + tx, oy + ty, k, k, Math.atan2(b, a)));
+function armorItems(m, n) {
+    return armorTiles(m, n).map(frameItem);
+}
+
+export function armorPagesAhead(intro, count) {
+    const m = intro.meta,
+        current = m.frameFrom + Math.floor(intro.frame),
+        out = [];
+
+    for (let n = current; n < current + count && n < m.frameFrom + m.frames.length; n++) {
+        for (const id of armorTiles(m, n)) {
+            const page = m.tiles[id].page;
+
+            if (!out.includes(page)) {
+                out.push(page);
+            }
         }
-
-        return items;
     }
 
-    const i = n - m.logoFrom,
-        fade = n < LOGO_FADE_FROM ? 1 : Math.max(0, 1 - (n - LOGO_FADE_FROM) / (225 - LOGO_FADE_FROM));
-
-    const [gs, gy] = m.glow[i],
-        [ds, dy, flash] = m.disc[i],
-        [ts, ty] = m.text[i];
-
-    if (gs) {
-        items.push(part('glow', ox, oy + gy, gs, gs, 0, fade));
-    }
-
-    if (flash > 0.01) {
-        items.push(part('disc', ox, oy + dy, ds, ds, 0, flash * fade));
-    }
-
-    items.push(part('logo', ox, oy, 1, 1, 0, fade));
-    items.push(part('text', ox, oy + ty, ts, ts, 0, fade));
-    return items;
+    return out.sort((a, b) => a - b);
 }
 
 function creditItems(m, f, alpha) {
@@ -144,7 +137,7 @@ export function introItems(intro) {
     }
 
     if (t < ENTER) {
-        return logoItems(m, m.swordFrom + t);
+        return armorItems(m, m.frameFrom + t);
     }
 
     const f = t - ENTER + 1;
