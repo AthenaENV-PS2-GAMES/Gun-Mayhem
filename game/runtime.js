@@ -256,6 +256,32 @@ export function startGame(options = {}) {
     }
 
     const pads = [0, 1, 2, 3].map(i => Gamepad.player(i));
+
+    // padman is loaded on the IOP by the first Gamepad.update(). Do it now, before the
+    // sounds, streams and memory card use up IOP memory, and never let a failure crash
+    // the game: update() is retried every frame (see stepGamepad).
+    let padError = null;
+    let padRetry = 0;
+
+    function stepGamepad() {
+        try {
+            Gamepad.update();
+
+            if (padError) {
+                console.log('GM2_PAD_RECOVERED');
+                padError = null;
+            }
+        } catch (error) {
+            if (!padError || padError !== String(error)) {
+                console.log('GM2_PAD_UPDATE_ERROR ' + error);
+            }
+
+            padError = String(error);
+            padRetry++;
+        }
+    }
+
+    stepGamepad();
     const pending = pads.map(() => ({move: 0, jump: false, jumpHeld: false, down: false, fire: false, grenade: false}));
     const idleInput = {move: 0, jump: false, jumpHeld: false, down: false, fire: false, grenade: false};
     const powerKit = loadPowerupKit();
@@ -4879,7 +4905,7 @@ export function startGame(options = {}) {
                 finishValidation();
             }
 
-            Gamepad.update();
+            stepGamepad();
             logPads();
 
             if (screen === 'lobby') {

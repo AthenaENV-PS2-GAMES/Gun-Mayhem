@@ -35,7 +35,7 @@ pcsx2 -batch -elf athena.elf   # example: the ELF path and the options depend on
 
 ## Status
 
-Tested in PCSX2. **Not tested on real PS2 hardware, nor with a multitap and four physical controllers.**
+Tested in PCSX2 and on a real PS2 (booting the ISO through OPL). **Not tested with a multitap and four physical controllers.**
 Deliberate differences from the original: no Insert key (tournament mode), no player name editing and no QUALITY option.
 
 ## Credits
