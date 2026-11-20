@@ -1,7 +1,7 @@
-import * as std from 'std';
+import {loadJson} from './loadjson.js';
 
 export function loadPowerupKit() {
-    const meta = JSON.parse(std.loadFile('assets/powerups/atlas.json'));
+    const meta = loadJson('assets/powerups/atlas.json');
 
     const image = new Image(meta.image),
         parts = meta.parts;

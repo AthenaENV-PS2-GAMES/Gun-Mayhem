@@ -1,4 +1,4 @@
-import * as std from 'std';
+import {loadJson} from './loadjson.js';
 import {COLORS, SHIRTS, HATS, COSMETIC_PLACEMENT, COSMETIC_ASSETS} from './cosmetics.js';
 import {WEAPONS} from './weapons.js';
 import {HEAD_BOB} from './idle.js';
@@ -14,9 +14,9 @@ export function loadCharacterKit() {
         throw new Error('Character textures could not be loaded');
     }
 
-    const colorParts = JSON.parse(std.loadFile('assets/cosmetics/atlas.json')).parts;
+    const colorParts = loadJson('assets/cosmetics/atlas.json').parts;
     const accessoryParts = colorParts;
-    const weaponParts = JSON.parse(std.loadFile('assets/weapons/atlas.json')).parts;
+    const weaponParts = loadJson('assets/weapons/atlas.json').parts;
 
     const IDLE_ANGLE = (40 * Math.PI) / 180,
         lerp = (a, b, m) => a + (b - a) * m;
@@ -30,7 +30,7 @@ export function loadCharacterKit() {
     const flash = Color.new(255, 221, 98);
 
     const menuArt = new Image('assets/ui/menu.png');
-    const menuParts = JSON.parse(std.loadFile('assets/ui/menu.json')).parts;
+    const menuParts = loadJson('assets/ui/menu.json').parts;
 
     const eyesOf = p => {
         const hat = HATS[p.hat || 0];

@@ -14,7 +14,7 @@ export const INTRO_SOUNDS = Object.freeze([
 
 export const INTRO_SOUND_IDS = Object.freeze([...new Set(INTRO_SOUNDS.map(e => e[1]))]);
 
-const ENTER = 224;
+export const ENTER = 224;
 const FADE_STEPS = 10;
 
 export function createIntro(meta) {

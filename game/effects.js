@@ -124,6 +124,11 @@ function init(p, kind, part, x, y) {
     return p;
 }
 
+// The bright core of the flash sprite sits this far from its registration point. Turning the flash 180 degrees (facing
+// left) or mirroring it vertically swings the core to the other side of that point, so the flash is anchored on its core:
+// (x, y) is where the core is centred (see game/muzzle.js) and the sprite is drawn with its origin moved onto the core.
+export const FLASH_CORE = Object.freeze({x: 31, y: 22.1});
+
 export function spawnFlash(fx, x, y, facing) {
     const p = slot(fx, KIND.FLASH, 'flash', x, y);
 

@@ -60,7 +60,9 @@ import {
 
 import {buildLayout, moveCursor, unlockLevelOf, statBars, STAT_LABELS, TILE} from './library.js';
 import {CRATE_SCALE} from './idle.js';
-import {createIntro, stepIntro, introItems, dueSounds, armorPagesAhead, INTRO_SOUND_IDS} from './intro.js';
+import {MUZZLE} from './muzzle.js';
+import {loadJson} from './loadjson.js';
+import {createIntro, stepIntro, introItems, dueSounds, armorPagesAhead, INTRO_SOUND_IDS, FPS as INTRO_FPS, ENTER as INTRO_ENTER} from './intro.js';
 
 import {
     ACTIONS,
@@ -120,6 +122,7 @@ import {
     COMBO_STYLES,
     KIND,
     ATLAS,
+    FLASH_CORE,
     spawnGrow,
     spawnPuff,
     spawnDebris,
@@ -531,18 +534,18 @@ export function startGame(options = {}) {
 
     const kit = loadCharacterKit();
     const crateImage = new Image('assets/crate/crate.png');
-    const cratePart = JSON.parse(std.loadFile('assets/crate/crate.json'));
+    const cratePart = loadJson('assets/crate/crate.json');
     const crateOptions = {width: 0, height: 0};
     const grenadeAtlas = new Image('assets/grenades/atlas.png');
-    const grenadeParts = JSON.parse(std.loadFile('assets/grenades/atlas.json')).parts;
+    const grenadeParts = loadJson('assets/grenades/atlas.json').parts;
 
     if (!crateImage.ready() || !grenadeAtlas.ready()) {
         throw new Error('Game textures could not be loaded');
     }
 
-    const fx = JSON.parse(std.loadFile('assets/mapfx/meta.json'));
+    const fx = loadJson('assets/mapfx/meta.json');
     const pickupImage = new Image('assets/mapfx/pickup.png');
-    const snow = JSON.parse(std.loadFile('assets/mapfx/snow.json'));
+    const snow = loadJson('assets/mapfx/snow.json');
 
     if (!pickupImage.ready()) {
         throw new Error('Map effect textures could not be loaded');
@@ -993,7 +996,7 @@ export function startGame(options = {}) {
     const libLayout = buildLayout(),
         lib = {index: 0, weapon: libLayout.tiles[0].id};
 
-    const libStats = JSON.parse(std.loadFile('assets/ui/gunstats.json'));
+    const libStats = loadJson('assets/ui/gunstats.json');
 
     function enterLibrary() {
         screen = 'library';
@@ -1067,10 +1070,37 @@ export function startGame(options = {}) {
         introStalls = 0,
         introStallFrames = [],
         introStarted = false,
-        introWait = 0;
+        introWait = 0,
+        introVideoDue = false,
+        armorVideo = null;
+
+    // The Armor Games part is a pre-rendered MPEG-2 video (tools/build_intro_video.py) decoded by the IPU. If it
+    // cannot be opened, the original tile-by-tile path is used.
+    function openArmorVideo() {
+        try {
+            if (typeof Video === 'undefined') {
+                return null;
+            }
+
+            const video = new Video('assets/intro/armor.m2v');
+
+            video.play();
+            return video;
+        } catch (error) {
+            console.log('GM2_INTRO_VIDEO_ERROR ' + error);
+            return null;
+        }
+    }
+
+    function closeArmorVideo() {
+        if (armorVideo) {
+            armorVideo.free();
+            armorVideo = null;
+        }
+    }
 
     function enterIntro() {
-        introMeta = JSON.parse(std.loadFile('assets/intro/intro.json'));
+        introMeta = loadJson('assets/intro/intro.json');
         introImage = new Image(introMeta.atlas.image);
         intro = createIntro(introMeta);
         introLoader = new ImageList();
@@ -1078,20 +1108,32 @@ export function startGame(options = {}) {
         introShown = [];
         introStarted = false;
         introWait = 0;
-        queueIntroPages();
         screen = 'intro';
         paused = false;
         introSfx = {};
 
+        // Sounds first, and the video only once startGame() has finished loading everything (see introInput): the video
+        // decoder thread reads its file from the disc all the time it plays, and the disc driver (cdfs / OPL) fails any
+        // other file opened meanwhile ("Sound.Sfx: cannot open file", "cannot read assets/hud/hud.json").
+        // A missing sound must not stop the game.
         for (const id of INTRO_SOUND_IDS) {
-            introSfx[id] = new Sound.Sfx('assets/audio/intro' + id + '.adp');
-            introSfx[id].volume = 65;
+            try {
+                const sfx = new Sound.Sfx('assets/audio/intro' + id + '.adp');
+
+                sfx.volume = 65;
+                introSfx[id] = sfx;
+            } catch (error) {
+                console.log('GM2_INTRO_SFX_ERROR ' + id + ' ' + error);
+            }
         }
 
+        introVideoDue = true;
         console.log('GM2_INTRO');
     }
 
     function leaveIntro() {
+        closeArmorVideo();
+
         if (introImage) {
             introImage.free();
             introImage = null;
@@ -1110,8 +1152,10 @@ export function startGame(options = {}) {
 
         if (introSfx) {
             for (const id of INTRO_SOUND_IDS) {
-                introSfx[id].stop();
-                introSfx[id].free();
+                if (introSfx[id]) {
+                    introSfx[id].stop();
+                    introSfx[id].free();
+                }
             }
 
             introSfx = null;
@@ -1144,7 +1188,7 @@ export function startGame(options = {}) {
         }
 
         for (const id of dueSounds(intro)) {
-            if (prefs.sfx) {
+            if (prefs.sfx && introSfx[id]) {
                 introSfx[id].play();
             }
         }
@@ -1157,8 +1201,34 @@ export function startGame(options = {}) {
             return;
         }
 
-        queueIntroPages();
-        introLoader.process(1);
+        if (introVideoDue) {
+            introVideoDue = false;
+            armorVideo = openArmorVideo();
+
+            if (armorVideo) {
+                introStarted = true;
+                console.log('GM2_INTRO_VIDEO_START');
+            } else {
+                queueIntroPages();
+            }
+        }
+
+        if (armorVideo) {
+            armorVideo.update();
+
+            if (!armorVideo.ended) {
+                intro.frame = (armorVideo.currentFrame * INTRO_FPS) / armorVideo.fps;
+                playIntroSounds();
+                return;
+            }
+
+            console.log('GM2_INTRO_VIDEO_END');
+            closeArmorVideo();
+            intro.frame = Math.max(intro.frame, INTRO_ENTER);
+        } else {
+            queueIntroPages();
+            introLoader.process(1);
+        }
 
         if (!introStarted) {
             introStarted = armorPagesAhead(intro, 2).every(id => introPages[id] && introPages[id].ready());
@@ -1197,7 +1267,9 @@ export function startGame(options = {}) {
             items = introItems(intro),
             armor = items.filter(it => it.kind === 'frame');
 
-        if (armor.length) {
+        if (armorVideo) {
+            armorVideo.draw(0, 0, 640, 448);
+        } else if (armor.length && !introVideoDue) {
             const ready = armor.every(it => {
                 const page = introPages[introMeta.tiles[it.tile].page];
 
@@ -2357,7 +2429,7 @@ export function startGame(options = {}) {
 
     function survival() {
         if (!survImage) {
-            survMeta = JSON.parse(std.loadFile('assets/survival/atlas.json'));
+            survMeta = loadJson('assets/survival/atlas.json');
             survImage = new Image(survMeta.image);
 
             if (!survImage.ready()) {
@@ -2666,7 +2738,7 @@ export function startGame(options = {}) {
         }
     }
 
-    const HUD = JSON.parse(std.loadFile('assets/hud/hud.json'));
+    const HUD = loadJson('assets/hud/hud.json');
     const hudAtlas = new Image(HUD.atlas.image);
 
     if (!hudAtlas.ready()) {
@@ -3307,7 +3379,7 @@ export function startGame(options = {}) {
     }
 
     const gsetupImage = new Image('assets/ui/gsetup.png');
-    const gsetupParts = JSON.parse(std.loadFile('assets/ui/gsetup.json')).parts;
+    const gsetupParts = loadJson('assets/ui/gsetup.json').parts;
 
     const gsetupOptions = {
         width: 0,
@@ -3421,7 +3493,7 @@ export function startGame(options = {}) {
     }
 
     const mapselImage = new Image('assets/ui/mapsel.png');
-    const mapselParts = JSON.parse(std.loadFile('assets/ui/mapsel.json')).parts;
+    const mapselParts = loadJson('assets/ui/mapsel.json').parts;
 
     let mapPreviewImage = null,
         mapPreviewFrame = 0;
@@ -3767,7 +3839,7 @@ export function startGame(options = {}) {
         teamWinImage.draw(Math.round(teamWinMeta.ox), Math.round(VIEW_Y + top), o);
     }
 
-    const loseMeta = JSON.parse(std.loadFile('assets/hud/campaignlose.json'));
+    const loseMeta = loadJson('assets/hud/campaignlose.json');
     const loseImage = new Image(loseMeta.image);
 
     if (!loseImage.ready()) {
@@ -3795,7 +3867,7 @@ export function startGame(options = {}) {
         loseImage.draw(Math.round(loseMeta.ox), Math.round(VIEW_Y + loseMeta.slide[f - 1]), o);
     }
 
-    const campMeta = JSON.parse(std.loadFile('assets/ui/campaign.json'));
+    const campMeta = loadJson('assets/ui/campaign.json');
     const campImage = new Image(campMeta.image);
 
     if (!campImage.ready()) {
@@ -3978,7 +4050,7 @@ export function startGame(options = {}) {
         textCenter('button', 'Continue', 450, 384, '#000000');
     }
 
-    const mainMeta = JSON.parse(std.loadFile('assets/ui/mainmenu.json'));
+    const mainMeta = loadJson('assets/ui/mainmenu.json');
     const mainImage = new Image(mainMeta.image);
 
     if (!mainImage.ready()) {
@@ -4200,18 +4272,18 @@ export function startGame(options = {}) {
         return value === null ? layer.y[index + 1] : value;
     }
 
-    const fxMeta = JSON.parse(std.loadFile('assets/fx/atlas.json'));
+    const fxMeta = loadJson('assets/fx/atlas.json');
     const fxAtlas = new Image(fxMeta.image);
 
     if (!fxAtlas.ready()) {
         throw new Error('Effect texture could not be loaded');
     }
 
-    const explosionMeta = JSON.parse(std.loadFile('assets/fx/explosion.json'));
+    const explosionMeta = loadJson('assets/fx/explosion.json');
     const explosionAtlas = new Image(explosionMeta.image);
-    const popupMeta = JSON.parse(std.loadFile('assets/hud/popups.json'));
+    const popupMeta = loadJson('assets/hud/popups.json');
     const popupAtlas = new Image(popupMeta.image);
-    const crateMeta = JSON.parse(std.loadFile('assets/hud/cratenames.json'));
+    const crateMeta = loadJson('assets/hud/cratenames.json');
     const crateAtlas = new Image(crateMeta.image);
 
     if (!explosionAtlas.ready() || !popupAtlas.ready() || !crateAtlas.ready()) {
@@ -4402,8 +4474,13 @@ export function startGame(options = {}) {
             o.endy = q.y + q.h;
             o.flipY = sy < 0;
             o.angle = kind === KIND.BLOOD ? (p.rot * Math.PI) / 180 : p.rot;
-            o.originX = q.originX * sx;
-            o.originY = q.originY * (sy < 0 ? -sy : sy);
+            // the flash is anchored on its core (see FLASH_CORE); flipY mirrors the picture inside its rectangle,
+            // so the anchor moves to the other side of it
+            const flash = kind === KIND.FLASH,
+                anchorY = (flash ? q.originY + FLASH_CORE.y : q.originY) * (sy < 0 ? -sy : sy);
+
+            o.originX = (flash ? q.originX + FLASH_CORE.x : q.originX) * sx;
+            o.originY = sy < 0 ? h - anchorY : anchorY;
             o.color = alphaTint[alpha > 128 ? 128 : alpha];
             image.draw(x - o.originX, y - o.originY, o);
         }
@@ -4459,9 +4536,9 @@ export function startGame(options = {}) {
     }
 
     const DUST_PER_BURST = 6;
-    const blingMeta = JSON.parse(std.loadFile('assets/hud/bling.json'));
-    const teamWinMeta = JSON.parse(std.loadFile('assets/hud/teamwin.json'));
-    const winnerMeta = JSON.parse(std.loadFile('assets/hud/winner.json'));
+    const blingMeta = loadJson('assets/hud/bling.json');
+    const teamWinMeta = loadJson('assets/hud/teamwin.json');
+    const winnerMeta = loadJson('assets/hud/winner.json');
     const winnerImage = new Image(winnerMeta.image);
 
     if (!winnerImage.ready()) {
@@ -4551,7 +4628,10 @@ export function startGame(options = {}) {
                 const w = WEAPONS[event.weapon],
                     f = event.facing;
 
-                spawnFlash(fxs, event.x + w.flashX * f, event.y - 38, f);
+                const muzzle = MUZZLE[event.weapon] || [w.flashX + FLASH_CORE.x, -38 + FLASH_CORE.y],
+                    mm = event.mini === undefined ? 1 : event.mini;
+
+                spawnFlash(fxs, event.x + muzzle[0] * f * mm, event.y + muzzle[1] * mm, f);
 
                 for (const e of w.eject) {
                     if (e.t === 0) {

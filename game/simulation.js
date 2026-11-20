@@ -622,7 +622,7 @@ function shoot(match, p) {
     match.stats.shots++;
     match.players[p.ownerId].stats.shots++;
     match.stats.weaponShots[p.weaponId] = (match.stats.weaponShots[p.weaponId] || 0) + 1;
-    match.events.push({type: 'shot', player: p.id, x: p.x, y: p.y, weapon: p.weaponId, facing: p.facing});
+    match.events.push({type: 'shot', player: p.id, x: p.x, y: p.y, weapon: p.weaponId, facing: p.facing, mini: p.miniMul});
 
     if (!p.ammo) {
         if (weapon.finite) {
